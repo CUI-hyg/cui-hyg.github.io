@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Page</title>
+    <script type="text/javascript">
+        function getQueryParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function() {
+            const queryParam = getQueryParameter('drs345mhgldb');
+            if (queryParam !== null) {
+                // 如果查询参数存在，自动跳转到 www.baidu.com
+                window.location.href = "https://www.baidu.com";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Checking...</h1>
+    <p>If you are not redirected automatically, please click <a href="https://www.baidu.com">here</a>.</p>
+</body>
+</html>
